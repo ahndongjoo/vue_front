@@ -1,8 +1,9 @@
 <template>
+<!-- //props 보낸 데이터 read-only임 수정금지 -->
         <div class="black_bg" v-if="모달창 == true">
         <div class="white_bg">
             <img :src="list[state].image" style="width=100%">
-            <h4>{{list[state].title}}</h4>
+            <h4 @click="$emit('openModal' , 1234)">{{list[state].title}}</h4>
             <h3>{{list[state].content}}</h3>
             <h3>{{list[state].price}}원</h3>
             <button @click="모달창 = false">닫기</button>
